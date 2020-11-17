@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled1.dir/ex_1/ex_1.cpp.o"
-  "CMakeFiles/untitled1.dir/main.cpp.o"
-  "untitled1"
+  "CMakeFiles/untitled1.dir/ex_1/ex_1.cpp.obj"
+  "CMakeFiles/untitled1.dir/ex_2/ex_2.cpp.obj"
+  "CMakeFiles/untitled1.dir/main.cpp.obj"
+  "libuntitled1.dll.a"
+  "untitled1.exe"
+  "untitled1.exe.manifest"
   "untitled1.pdb"
 )
 

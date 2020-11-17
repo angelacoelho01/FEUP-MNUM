@@ -3,4 +3,4 @@ project(untitled1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(untitled1 main.cpp ex_1/ex_1.cpp ex_1/ex_1.h)
+add_executable(untitled1 main.cpp ex_1/ex_1.cpp ex_1/ex_1.h ex_2/ex_2.cpp ex_2/ex_2.h)

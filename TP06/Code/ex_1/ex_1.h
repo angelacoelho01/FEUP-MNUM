@@ -5,14 +5,16 @@
 #ifndef UNTITLED1_EX_1_H
 #define UNTITLED1_EX_1_H
 
+#define SEPARATOR "----------------------------------------"
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 double df(double x, double y);
 
-double euler(double h, double final);
+double euler(const double h, const double final);
 
-double rk4(double h, double final);
+double rk4(const double h, const double final);
 
 double convergenceQuotient(double solutions[]);
 
