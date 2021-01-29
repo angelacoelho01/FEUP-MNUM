@@ -75,18 +75,18 @@ def falsePosition(a, b, stopCriterion):
 
 print("***************Bisection Method****************")
 print("Interval: [" + str(a) + ", " + str(b) + "]\n")
-print("Absolute stop criterion: " + str(bisection(a, b, absoluteStopCriterion)) + str("\n"))
-print("Relative stop criterion: " + str(bisection(a, b, relativeStopCriterion)) + str("\n"))
-print("Cancel function criterion: " + str(bisection(a, b, cancelFunctionCriterion)) + str("\n")) 
+print("Absolute stop criterion: " + str(bisection(a, b, absoluteStopCriterion)) + "\n")
+print("Relative stop criterion: " + str(bisection(a, b, relativeStopCriterion)) + "\n")
+print("Cancel function criterion: " + str(bisection(a, b, cancelFunctionCriterion)) + "\n")
 print("Relative cancel function criterion: " + str(bisection(a, b, relativeCancelFunctionCriterion)))
 print("***********************************************\n\n")
 
 
 print("*************False Position Method*************")
 print("Interval: [" + str(a) + ", " + str(b) + "]\n")
-print("Absolute stop criterion: " + str(falsePosition(a, b, absoluteStopCriterion)) + str("\n"))
-print("Relative stop criterion: " + str(falsePosition(a, b, relativeStopCriterion)) + str("\n"))
-print("Cancel function criterion: " + str(falsePosition(a, b, cancelFunctionCriterion)) + str("\n"))
+print("Absolute stop criterion: " + str(falsePosition(a, b, absoluteStopCriterion)) + "\n")
+print("Relative stop criterion: " + str(falsePosition(a, b, relativeStopCriterion)) + "\n")
+print("Cancel function criterion: " + str(falsePosition(a, b, cancelFunctionCriterion)) + "\n")
 print("Relative cancel function criterion: " + str(falsePosition(a, b, relativeCancelFunctionCriterion)))
 print("***********************************************\n")
 

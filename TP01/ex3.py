@@ -33,7 +33,7 @@ def newton(x, no_iter):
         
         print("Number of iterations: " + str(counter_iter))
         print("g(x) = " + str(picardPeano_f(x)))
-        print("Root: " + str(x_next) + str("\n"))
+        print("Root: " + str(x_next) + "\n")
             
         x = x_next
         x_next = x - f(x)/diff_f(x)
@@ -55,7 +55,7 @@ def picardPeano(x, no_iter):
     while counter_iter < no_iter:
         print("Number of iterations: " + str(counter_iter))
         print("g(x) = " + str(picardPeano_f(x)))
-        print("Root: " + str(x_next) + str("\n"))
+        print("Root: " + str(x_next) + "\n")
 
         x = x_next
         x_next = picardPeano_f(x)
