@@ -98,14 +98,14 @@ def picardPeano(x):
     
 
 print("*********Bisection Method*********")
-a = input("Left extrem: ")
-b = input("Right extrem: ")
+a = input("Lower extreme: ")
+b = input("Higher extreme: ")
 print("\nRoot value: " + str(bisection(float(a), float(b))))
 print("**********************************\n\n")
 
 print("******False Position Method******")
-a = input("Left extrem: ")
-b = input("Right extrem: ")
+a = input("Lower extreme: ")
+b = input("Higher extreme: ")
 print("\nRoot value: " + str(falsePosition(float(a), float(b))))
 print("*********************************\n\n")
 
