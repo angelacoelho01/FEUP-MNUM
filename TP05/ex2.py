@@ -17,6 +17,7 @@ def trapezoidal(x0, xn, n):
 
 
 def simpson(x0, xn, n):
+    n *= 2
     y0 = f(x0)
     yn = f(xn)
     h = (xn - x0)/n
@@ -45,20 +46,24 @@ xn = 4
 n = [4, 8, 16, 32, 64]
 
 
-print("****************Trapezoidal rule****************\n")
+print("****************Trapezoidal rule*****************\n")
 for i in n:
     print("n = " + str(i))
-    print("\tResult: " + str(trapezoidal(x0,xn,i)))
-    print("\tConvergence quocient: " + str(convergenceQuotient(x0, xn, i, trapezoidal)), '\n')
-print("*************************************************\n\n")
+    print("\tResult = " + str(trapezoidal(x0,xn,i)))
+print('')
+for i in range(0, 3):
+    print("\tQC(" + str(i+1) + ") = " + str(convergenceQuotient(x0, xn, n[i], trapezoidal)))
+print("\n*************************************************\n\n")
 
 
-print("******************Simpson rule*******************\n")
+print("*****************Simpson's rule******************\n")
 for i in n:
     print("n = " + str(i))
-    print("\tResult: " + str(simpson(x0,xn,i)))
-    print("\tConvergence quocient: " + str(convergenceQuotient(x0, xn, i, simpson)), '\n')
-print("*************************************************\n")
+    print("\tResult = " + str(simpson(x0,xn,i)))
+print('')
+for i in range(0, 3):
+    print("\tQC(" + str(i+1) + ") = " + str(convergenceQuotient(x0, xn, n[i], simpson)))
+print("\n*************************************************\n")
 
 
 

@@ -17,6 +17,7 @@ def trapezoidal(x0, xn, n):
 
 
 def simpson(x0, xn, n):
+    n *= 2
     h = (xn - x0)/n
     y0 = f(x0)
     yn = f(xn)
@@ -45,18 +46,22 @@ xn = math.pi
 n = [4, 8, 16, 64]
 
 
-print("***************Trapezoidal method***************\n")
+print("****************Trapezoidal rule*****************\n")
 for i in n:
     print("n = " + str(i))
     print("\tResult: " + str(trapezoidal(x0,xn,i)))
-    print("\tConvergence quocient: " + str(convergenceQuotient(x0, xn, i, trapezoidal)), '\n')
-print("*************************************************\n\n")
+print('')
+for i in range(0, 2):
+    print("\tQC(" + str(i+1) + ") = " + str(convergenceQuotient(x0, xn, n[i], trapezoidal)))
+print("\n*************************************************\n\n")
 
 
-print("*****************Simpson method******************\n")
+print("*****************Simpson's rule******************\n")
 for i in n:
     print("n = " + str(i))
     print("\tResult: " + str(simpson(x0,xn,i)))
-    print("\tConvergence quocient: " + str(convergenceQuotient(x0, xn, i, simpson)), '\n')
-print("*************************************************\n")
+print('')
+for i in range(0, 2):
+    print("\tQC(" + str(i+1) + ") = " + str(convergenceQuotient(x0, xn, n[i], simpson)))
+print("\n*************************************************\n")
 
