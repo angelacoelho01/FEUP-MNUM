@@ -33,10 +33,10 @@ def simpson(x0, xn, n):
     
 
 
-def convergenceQuotient(x0, xn, n, method):
-    S = method(x0, xn, n)
-    S_l = method(x0, xn, 2*n)
-    S_ll = method(x0, xn, 4*n)
+def convergenceQuotient(x0, xn, n, rule):
+    S = rule(x0, xn, n)
+    S_l = rule(x0, xn, 2*n)
+    S_ll = rule(x0, xn, 4*n)
     
     return (S_l - S)/(S_ll - S_l)
 
@@ -45,7 +45,7 @@ xn = 4
 n = [4, 8, 16, 32, 64]
 
 
-print("***************Trapezoidal method***************\n")
+print("****************Trapezoidal rule****************\n")
 for i in n:
     print("n = " + str(i))
     print("\tResult: " + str(trapezoidal(x0,xn,i)))
@@ -53,7 +53,7 @@ for i in n:
 print("*************************************************\n\n")
 
 
-print("*****************Simpson method******************\n")
+print("******************Simpson rule*******************\n")
 for i in n:
     print("n = " + str(i))
     print("\tResult: " + str(simpson(x0,xn,i)))

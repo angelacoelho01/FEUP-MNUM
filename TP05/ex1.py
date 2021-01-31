@@ -32,10 +32,10 @@ def simpson(x0, xn, n):
     return ((h/3) * (y0 + yn + 4*counter_odd + 2*counter_even))
          
 
-def convergenceQuotient(x0, xn, n, method):
-    S = method(x0, xn, n)
-    S_l = method(x0, xn, n*2)
-    S_ll = method(x0, xn, n*4)
+def convergenceQuotient(x0, xn, n, rule):
+    S = rule(x0, xn, n)
+    S_l = rule(x0, xn, n*2)
+    S_ll = rule(x0, xn, n*4)
     
     return (S_l - S)/(S_ll - S_l)
 
