@@ -1,36 +1,36 @@
-def diff_a(t, v, a):
-    return 0.5*a - v
+def diff_z(x, y, z):
+    return 0.5*z - y
 
 
-def diff_v(t, v, a):
-    return a
+def diff_y(x, y, z):
+    return z
 
 
-def rk2(t0, v0, a0, ti, tf, h):
-    n = round((tf - ti)/h)
-    tn = t0
-    vn = t0
-    an = a0
+def rk2(x0, y0, z0, xi, xf, h):
+    n = round((xf - xi)/h)
+    xn = x0
+    yn = y0
+    zn = z0
     
     for i in range(0, n):
-        delta_v = h * diff_v(t0 + h/2, v0 + (h/2 * diff_v(t0, v0, a0)), a0 + (h/2 * diff_a(t0, v0, a0)))
-        delta_a = h * diff_a(t0 + h/2, v0 + (h/2 *diff_v(t0, v0, a0)), a0 + (h/2 * diff_a(t0, v0, a0)))
+        delta_y = h * diff_y(x0 + h/2, y0 + h/2 * diff_y(x0, y0, z0), z0 + h/2 * diff_z(x0, y0, z0))
+        delta_z = h * diff_z(x0 + h/2, y0 + h/2 * diff_y(x0, y0, z0), z0 + h/2 * diff_z(x0, y0, z0))
         
-        tn = t0 + h
-        vn = v0 + delta_v
-        an = a0 + delta_a
+        xn = x0 + h
+        yn = y0 + delta_y
+        zn = z0 + delta_z
         
-        t0 = tn
-        v0 = vn
-        a0 = an
+        x0 = xn
+        y0 = yn
+        z0 = zn
         
-    return vn, an
+    return yn, zn
 
 
-def convergenceQuotientError(t0, v0, a0, ti, tf, h):
-    Sy, Sz = rk2(t0, v0, a0, ti, tf, h)
-    Sy_l, Sz_l = rk2(t0, v0, a0, ti, tf, h/2)
-    Sy_ll, Sz_ll = rk2(t0, v0, a0, ti, tf, h/4)
+def convergenceQuotientError(x0, y0, z0, xi, xf, h):
+    Sy, Sz = rk2(x0, y0, z0, xi, xf, h)
+    Sy_l, Sz_l = rk2(x0, y0, z0, xi, xf, h/2)
+    Sy_ll, Sz_ll = rk2(x0, y0, z0, xi, xf, h/4)
     
     qc_y = (Sy_l - Sy)/(Sy_ll - Sy_l)
     qc_z = (Sz_l - Sz)/(Sz_ll - Sz_l)
@@ -50,24 +50,19 @@ def convergenceQuotientError(t0, v0, a0, ti, tf, h):
     print("\tS''(z) = " + str(Sz_ll), '\n')
     
     print("\tQC(z) = " + str(qc_z))
-    print("\tError(z) = " + str(error_z), '\n')
+    print("\tError(z) = " + str(error_z), "\n")
     
-    return qc_y, error_y, qc_z, error_z
 
-
-ti = 0
-tf = 4
-t0 = 0
-v0 = 2
-a0 = 0
+x0 = 2
+y0 = 2
+z0 = 0
+xi = 0
+xf = 4
 h = 0.01
 
-print("---------------RK2 method---------------")
+print("---------------RK2 method---------------", '\n')
 print("h = " + str(h), '\n')
-print("t = " + str(tf), '\n')
-convergenceQuotientError(t0, v0, a0, ti, tf, h)
-print("----------------------------------------")
-
-    
-    
+print("x = " + str(xf), '\n')
+convergenceQuotientError(x0, y0, z0, xi, xf, h)
+print("----------------------------------------", '\n')
     

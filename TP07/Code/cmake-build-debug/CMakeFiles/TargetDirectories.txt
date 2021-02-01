@@ -1,3 +1,0 @@
-C:/Users/Filipa/Desktop/MIEIC/2nd year/1st smester/MNUM/FEUP-MNUM/TP06/Code/cmake-build-debug/CMakeFiles/untitled1.dir
-C:/Users/Filipa/Desktop/MIEIC/2nd year/1st smester/MNUM/FEUP-MNUM/TP06/Code/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Filipa/Desktop/MIEIC/2nd year/1st smester/MNUM/FEUP-MNUM/TP06/Code/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -75,7 +75,7 @@ n = 1
 
 
 k = 0
-print("-----------------RK4 method---------------", '\n')
+print("----------------------RK4 method--------------------", '\n')
 print("h = " + str(h), '\n')
 print("k = " + str(k), '\n')
 rk4(x0, y0, z0, n, h, True)
@@ -88,7 +88,22 @@ k = 6
 print("k = " + str(k), '\n')
 rk4(x0, y0, z0, n, h, True)
 convergenceQuotientError(x0, y0, z0, n, h)
-print("------------------------------------------", '\n\n')
+print("We can see that the table values are equal for k =2.",'\n')
+k = 2
+h = 0.2
+print("k = " + str(k), '\n')
+print("h = " + str(h), '\n')
+rk4(x0, y0, z0, n, h, True)
+convergenceQuotientError(x0, y0, z0, n, h)
+h = 0.1
+print("h = " + str(h), '\n')
+rk4(x0, y0, z0, n, h, True)
+convergenceQuotientError(x0, y0, z0, n, h)
+h = 0.05
+print("h = " + str(h), '\n')
+rk4(x0, y0, z0, n, h, True)
+convergenceQuotientError(x0, y0, z0, n, h)
+print("----------------------------------------------------", '\n\n')
 
         
     
