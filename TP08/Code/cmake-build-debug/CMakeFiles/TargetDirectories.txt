@@ -1,3 +1,0 @@
-C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/MNUM/FEUP-MNUM/TP08/Code/cmake-build-debug/CMakeFiles/Code.dir
-C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/MNUM/FEUP-MNUM/TP08/Code/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/angel/OneDrive/Desktop/MIEIC/2nd_year/1st_semester/MNUM/FEUP-MNUM/TP08/Code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
